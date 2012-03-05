@@ -8,6 +8,7 @@
 
 #import "AccountViewController.h"
 #import <Parse/Parse.h>
+#define KEY_WEIGHT @"weight"
 
 @interface AccountViewController ()
 
@@ -28,6 +29,8 @@
             if (!error) {
                 NSLog(@"Successfully retrieved %d records.", objects.count);
                 PFObject *user = [objects objectAtIndex:(objects.count - 1)];
+                NSNumber *weight = [user valueForKey:KEY_WEIGHT];
+                
             } else {
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
@@ -95,7 +98,7 @@
 {
     PFObject *user = [PFObject objectWithClassName:@"User"];
     [user setObject:self.uuid forKey:@"uuid"];
-    [user setObject:[self weight] forKey:@"weight"];
+    [user setObject:[self weight] forKey:KEY_WEIGHT];
     [user save];
     NSLog(@"Saving uuid: %@ weight: %@", self.uuid, [self weight]);
 }
