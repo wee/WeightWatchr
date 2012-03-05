@@ -14,12 +14,20 @@
 		426724441504630500A8121D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426724431504630500A8121D /* main.m */; };
 		426724481504630500A8121D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426724471504630500A8121D /* AppDelegate.m */; };
 		4267244B1504630500A8121D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426724491504630500A8121D /* MainStoryboard.storyboard */; };
-		4267244E1504630500A8121D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4267244D1504630500A8121D /* FirstViewController.m */; };
+		4267244E1504630500A8121D /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4267244D1504630500A8121D /* AccountViewController.m */; };
 		426724501504630500A8121D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 4267244F1504630500A8121D /* first.png */; };
 		426724521504630500A8121D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 426724511504630500A8121D /* first@2x.png */; };
-		426724551504630500A8121D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426724541504630500A8121D /* SecondViewController.m */; };
+		426724551504630500A8121D /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426724541504630500A8121D /* ChartViewController.m */; };
 		426724571504630500A8121D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 426724561504630500A8121D /* second.png */; };
 		426724591504630500A8121D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 426724581504630500A8121D /* second@2x.png */; };
+		42672460150464E500A8121D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4267245F150464E500A8121D /* Parse.framework */; };
+		42672462150464FC00A8121D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42672461150464FC00A8121D /* AudioToolbox.framework */; };
+		426724641504650300A8121D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426724631504650300A8121D /* CFNetwork.framework */; };
+		426724661504650A00A8121D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426724651504650A00A8121D /* SystemConfiguration.framework */; };
+		426724681504651300A8121D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426724671504651300A8121D /* MobileCoreServices.framework */; };
+		4267246A1504652200A8121D /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 426724691504652200A8121D /* libz.1.1.3.dylib */; };
+		4267246C1504652800A8121D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4267246B1504652800A8121D /* Security.framework */; };
+		4267246E1504653600A8121D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4267246D1504653600A8121D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,21 +35,29 @@
 		426724371504630500A8121D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		426724391504630500A8121D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4267243B1504630500A8121D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4267243F1504630500A8121D /* WeightRecordr-Info.plist */ = {isa = PBXFileReference; path = "WeightRecordr-Info.plist"; sourceTree = "<group>"; };
+		4267243F1504630500A8121D /* WeightRecordr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeightRecordr-Info.plist"; sourceTree = "<group>"; };
 		426724411504630500A8121D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		426724431504630500A8121D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		426724451504630500A8121D /* WeightRecordr-Prefix.pch */ = {isa = PBXFileReference; path = "WeightRecordr-Prefix.pch"; sourceTree = "<group>"; };
-		426724461504630500A8121D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		426724451504630500A8121D /* WeightRecordr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeightRecordr-Prefix.pch"; sourceTree = "<group>"; };
+		426724461504630500A8121D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		426724471504630500A8121D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4267244A1504630500A8121D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		4267244C1504630500A8121D /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		4267244D1504630500A8121D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		4267244C1504630500A8121D /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		4267244D1504630500A8121D /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		4267244F1504630500A8121D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		426724511504630500A8121D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		426724531504630500A8121D /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		426724541504630500A8121D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		426724531504630500A8121D /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		426724541504630500A8121D /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
 		426724561504630500A8121D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		426724581504630500A8121D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		4267245F150464E500A8121D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		42672461150464FC00A8121D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		426724631504650300A8121D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		426724651504650A00A8121D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		426724671504651300A8121D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		426724691504652200A8121D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		4267246B1504652800A8121D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4267246D1504653600A8121D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +65,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4267246E1504653600A8121D /* QuartzCore.framework in Frameworks */,
+				4267246C1504652800A8121D /* Security.framework in Frameworks */,
+				4267246A1504652200A8121D /* libz.1.1.3.dylib in Frameworks */,
+				4267243C1504630500A8121D /* CoreGraphics.framework in Frameworks */,
+				426724681504651300A8121D /* MobileCoreServices.framework in Frameworks */,
+				426724661504650A00A8121D /* SystemConfiguration.framework in Frameworks */,
+				426724641504650300A8121D /* CFNetwork.framework in Frameworks */,
+				42672462150464FC00A8121D /* AudioToolbox.framework in Frameworks */,
 				426724381504630500A8121D /* UIKit.framework in Frameworks */,
 				4267243A1504630500A8121D /* Foundation.framework in Frameworks */,
-				4267243C1504630500A8121D /* CoreGraphics.framework in Frameworks */,
+				42672460150464E500A8121D /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +102,14 @@
 		426724361504630500A8121D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4267246D1504653600A8121D /* QuartzCore.framework */,
+				4267246B1504652800A8121D /* Security.framework */,
+				426724691504652200A8121D /* libz.1.1.3.dylib */,
+				426724671504651300A8121D /* MobileCoreServices.framework */,
+				426724651504650A00A8121D /* SystemConfiguration.framework */,
+				426724631504650300A8121D /* CFNetwork.framework */,
+				42672461150464FC00A8121D /* AudioToolbox.framework */,
+				4267245F150464E500A8121D /* Parse.framework */,
 				426724371504630500A8121D /* UIKit.framework */,
 				426724391504630500A8121D /* Foundation.framework */,
 				4267243B1504630500A8121D /* CoreGraphics.framework */,
@@ -91,12 +123,12 @@
 				426724461504630500A8121D /* AppDelegate.h */,
 				426724471504630500A8121D /* AppDelegate.m */,
 				426724491504630500A8121D /* MainStoryboard.storyboard */,
-				4267244C1504630500A8121D /* FirstViewController.h */,
-				4267244D1504630500A8121D /* FirstViewController.m */,
+				4267244C1504630500A8121D /* AccountViewController.h */,
+				4267244D1504630500A8121D /* AccountViewController.m */,
 				4267244F1504630500A8121D /* first.png */,
 				426724511504630500A8121D /* first@2x.png */,
-				426724531504630500A8121D /* SecondViewController.h */,
-				426724541504630500A8121D /* SecondViewController.m */,
+				426724531504630500A8121D /* ChartViewController.h */,
+				426724541504630500A8121D /* ChartViewController.m */,
 				426724561504630500A8121D /* second.png */,
 				426724581504630500A8121D /* second@2x.png */,
 				4267243E1504630500A8121D /* Supporting Files */,
@@ -183,8 +215,8 @@
 			files = (
 				426724441504630500A8121D /* main.m in Sources */,
 				426724481504630500A8121D /* AppDelegate.m in Sources */,
-				4267244E1504630500A8121D /* FirstViewController.m in Sources */,
-				426724551504630500A8121D /* SecondViewController.m in Sources */,
+				4267244E1504630500A8121D /* AccountViewController.m in Sources */,
+				426724551504630500A8121D /* ChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +290,10 @@
 		4267245D1504630500A8121D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeightRecordr/WeightRecordr-Prefix.pch";
 				INFOPLIST_FILE = "WeightRecordr/WeightRecordr-Info.plist";
@@ -269,6 +305,10 @@
 		4267245E1504630500A8121D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeightRecordr/WeightRecordr-Prefix.pch";
 				INFOPLIST_FILE = "WeightRecordr/WeightRecordr-Info.plist";
