@@ -17,10 +17,34 @@
 @synthesize weightPickerView=_weightPickerView;
 @synthesize uuid=_uuid;
 
+
+- (void)loadUser:(NSString *)uuid
+{
+    if (self.uuid != nil) {
+        PFQuery *query = [PFQuery queryWithClassName:@"User"];
+        query.cachePolicy = kPFCachePolicyNetworkElseCache;
+        [query whereKey:@"uuid" equalTo:self.uuid];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                NSLog(@"Successfully retrieved %d records.", objects.count);
+                PFObject *user = [objects objectAtIndex:(objects.count - 1)];
+            } else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.uuid = (NSString *)[defaults valueForKey:@"uuid"];
+    if (self.uuid == nil) {
+        self.uuid = [[NSProcessInfo processInfo] globallyUniqueString];
+        [defaults setValue:self.uuid forKey:@"uuid"];
+    }
 }
 
 - (void)viewDidUnload
@@ -48,7 +72,7 @@
     }
     return 10;
 }
-
+    
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (component == (NSInteger)3) {
@@ -69,6 +93,10 @@
 #pragma mark - Save Weight
 - (void)saveWeight
 {
-    
+    PFObject *user = [PFObject objectWithClassName:@"User"];
+    [user setObject:self.uuid forKey:@"uuid"];
+    [user setObject:[self weight] forKey:@"weight"];
+    [user save];
+    NSLog(@"Saving uuid: %@ weight: %@", self.uuid, [self weight]);
 }
 @end
